@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="modifiedzh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="效果图 请先去看这里，特别是第八步（GNOME插件安装） 安装GNOME Tweaks见上文链接 添加软件源终端输入sudo add-apt-repository ppa:noobslab/macbuntu DockDock作为Mac的灵魂肯定要第一个讲。对于Dock有3种方案：Docky, Plank和Dash to Dock。 安装Docky耗能较大，空间较多，功能较多，易崩溃（毕竟一个Doc">
+<meta name="keywords" content="Ubuntu,Linux,GNOME,Mac OS,OSX">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 18.04 LTS 美化 - 仿Mac OS X">
+<meta property="og:url" content="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/index.html">
+<meta property="og:site_name" content="Zimo&#39;s Blog">
+<meta property="og:description" content="效果图 请先去看这里，特别是第八步（GNOME插件安装） 安装GNOME Tweaks见上文链接 添加软件源终端输入sudo add-apt-repository ppa:noobslab/macbuntu DockDock作为Mac的灵魂肯定要第一个讲。对于Dock有3种方案：Docky, Plank和Dash to Dock。 安装Docky耗能较大，空间较多，功能较多，易崩溃（毕竟一个Doc">
+<meta property="og:locale" content="modifiedzh-CN">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/mac-os-x-like-ubuntu.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/docky.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/plank.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/gconfEditorDockyIcon.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet1.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet2.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet3.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/topBarExecute.png">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/boot.jpg">
+<meta property="og:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/log.jpg">
+<meta property="og:updated_time" content="2019-05-20T13:26:43.272Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ubuntu 18.04 LTS 美化 - 仿Mac OS X">
+<meta name="twitter:description" content="效果图 请先去看这里，特别是第八步（GNOME插件安装） 安装GNOME Tweaks见上文链接 添加软件源终端输入sudo add-apt-repository ppa:noobslab/macbuntu DockDock作为Mac的灵魂肯定要第一个讲。对于Dock有3种方案：Docky, Plank和Dash to Dock。 安装Docky耗能较大，空间较多，功能较多，易崩溃（毕竟一个Doc">
+<meta name="twitter:image" content="https://zimocp.github.io/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/mac-os-x-like-ubuntu.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Ubuntu 18.04 LTS 美化 - 仿Mac OS X | Zimo's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="modifiedzh-CN">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zimo's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">蒟蒻的blog</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-gravestone">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/gravestone/" rel="section"><i class="menu-item-icon fa fa-fw fa-monument"></i> <br>墓碑</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/ZimoCP" class="github-corner" title="(Don't) Follow me on GitHub" aria-label="(Don't) Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zimo">
+      <meta itemprop="description" content="蒟蒻的blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zimo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Ubuntu 18.04 LTS 美化 - 仿Mac OS X
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-20 21:25:42 / 修改时间：21:26:43" itemprop="dateCreated datePublished" datetime="2019-05-20T21:25:42+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/GNOME/" itemprop="url" rel="index"><span itemprop="name">GNOME</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>效果图<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/mac-os-x-like-ubuntu.png" alt></p>
+<p><strong>请先去看<a href="https://zimocp.github.io/2019/04/17/Ubuntu-18-04-LTS-%E7%BE%8E%E5%8C%96/">这里</a>，特别是第八步（GNOME插件安装）</strong></p>
+<h2 id="安装GNOME-Tweaks"><a href="#安装GNOME-Tweaks" class="headerlink" title="安装GNOME Tweaks"></a><a href="#安装GNOME-Tweaks" title="安装GNOME Tweaks"></a>安装GNOME Tweaks</h2><p>见上文链接</p>
+<h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a><a href="#添加软件源" title="添加软件源"></a>添加软件源</h2><p>终端输入<br><code>sudo add-apt-repository ppa:noobslab/macbuntu</code></p>
+<h2 id="Dock"><a href="#Dock" class="headerlink" title="Dock"></a><a href="#Dock" title="Dock"></a>Dock</h2><p>Dock作为Mac的灵魂肯定要第一个讲。<br>对于Dock有3种方案：Docky, Plank和Dash to Dock。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="#安装" title="安装"></a>安装</h3><h4 id="Docky"><a href="#Docky" class="headerlink" title="Docky"></a><a href="#Docky" title="Docky"></a>Docky</h4><p>耗能较大，空间较多，功能较多，易崩溃（毕竟一个Dock耗能再多也比GNOME默认的Dash少。。。）<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/docky.png" alt="docky"><br>安装：终端输入<code>sudo apt-get install docky</code></p>
+<h4 id="Plank"><a href="#Plank" class="headerlink" title="Plank"></a><a href="#Plank" title="Plank"></a>Plank</h4><p>耗能很少，空间少，功能有限，简洁的一匹，几乎不崩溃（推荐，如果只想要一个单纯的Dock就选这个好了）<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/plank.png" alt="plank"><br>安装：终端输入<code>sudo apt-get install plank</code></p>
+<h4 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a><a href="#Dash-to-Dock" title="Dash to Dock"></a>Dash to Dock</h4><p>GNOME插件，耗能咕咕咕，bug多，功能有限，几乎不崩溃（不推荐，但是有自适应透明度、配合GNOME原生应用程序菜单）<br>效果图没有<br><a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank" rel="noopener">安装</a></p>
+<h3 id="推荐主题（仅推荐，并不一定仿Mac）"><a href="#推荐主题（仅推荐，并不一定仿Mac）" class="headerlink" title="推荐主题（仅推荐，并不一定仿Mac）"></a><a href="#推荐主题（仅推荐，并不一定仿Mac）" title="推荐主题（仅推荐，并不一定仿Mac）"></a>推荐主题（仅推荐，并不一定仿Mac）</h3><h4 id="Docky：EnigmoDarky"><a href="#Docky：EnigmoDarky" class="headerlink" title="Docky：EnigmoDarky"></a><a href="#Docky：EnigmoDarky" title="Docky：EnigmoDarky"></a>Docky：EnigmoDarky</h4><p><a href="/upload/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/EnigmoDarky.tar">下载</a><br>安装方法：找到Docky第一个按钮左键（或在Docky部件和各种程序之间会由一个分割线，右键它，点击设置），<code>主题</code>的后面有<code>安装</code>，点击后选择下下来的tar压缩包即可<br>食用方法：做完上一步之后就不用我说了吧？</p>
+<h4 id="Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题"><a href="#Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题" class="headerlink" title="Plank：Frost，Mac OS Themes，MacBuntu的Plank主题"></a><a href="#Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题" title="Plank：Frost，Mac OS Themes，MacBuntu的Plank主题"></a>Plank：Frost，Mac OS Themes，MacBuntu的Plank主题</h4><p><a href="/upload/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/frost-plank-theme-2.2.1.zip">下载Frost</a>，<a href="/upload/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/plank-macOS-Themes-Pack.zip">下载Mac OS Themes</a><br>安装方法：<br>Frost：在解压后的文件夹里找到名为<code>Frost</code>的文件夹，将他复制到<code>~/.local/share/plank/themes</code>里（没有就创建）<br>Mac OS Themes：解压后进入文件夹，你会看到一大堆主题，根据名字复制你需要的文件夹到<code>~/.local/share/plank/themes</code>里（没有就创建）<br>MacBuntu：见下文<br>食用方法：在Plank上<code>Ctrl+右键</code>，点击<code>首选项</code>，然后就不用我说了吧？</p>
+<h3 id="隐藏原Dash"><a href="#隐藏原Dash" class="headerlink" title="隐藏原Dash"></a><a href="#隐藏原Dash" title="隐藏原Dash"></a>隐藏原Dash</h3><p>（打算使用Dash to Dock作为Dock的跳过此步）<br>见上文安装<code>Dash to Dock</code><br>安装好之后进入GNOME Tweaks，进入左侧栏<code>插件</code>，将Dash to Dock打开（开了以后可以试试关了它，如果发现没有变回Ubuntu默认dash，那么就一直把他关着好了）<br>点击Dash to Dock的设置按钮，打开<code>自动隐藏</code>，把两个开关都关掉，你会发现你找不到Dash了</p>
+<h3 id="启动Dock"><a href="#启动Dock" class="headerlink" title="启动Dock"></a><a href="#启动Dock" title="启动Dock"></a>启动Dock</h3><p>（打算使用Dash to Dock作为Dock的跳过此步）<br>按下<code>Alt+F2</code>，输入<code>docky</code>（或<code>plank</code>），回车</p>
+<h3 id="Dock开机启动"><a href="#Dock开机启动" class="headerlink" title="Dock开机启动"></a><a href="#Dock开机启动" title="Dock开机启动"></a>Dock开机启动</h3><p>（打算使用Dash to Dock作为Dock的跳过此步）<br>打开GNOME Tweaks，左侧栏进入开机启动程序，</p>
+<h3 id="隐藏Docky最左侧的图标"><a href="#隐藏Docky最左侧的图标" class="headerlink" title="隐藏Docky最左侧的图标"></a><a href="#隐藏Docky最左侧的图标" title="隐藏Docky最左侧的图标"></a>隐藏Docky最左侧的图标</h3><p>（不使用Docky作为Dock的跳过此步）<br>终端输入，安装Gconf编辑器<br><code>sudo apt-get install gconf-editor</code><br>打开gconf（<code>配置编辑器</code>），按照图中的样子打开<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/gconfEditorDockyIcon.png" alt="docky"><br>将右侧的<code>ShowDockyItem</code>取消勾选，关掉gconf就生效了</p>
+<h2 id="Launchpad"><a href="#Launchpad" class="headerlink" title="Launchpad"></a><a href="#Launchpad" title="Launchpad"></a>Launchpad</h2><p>Slingscold是一个比GNOME原生启动器轻量的多的多的多的全屏启动器，虽然不是很像Mac但是是最好的选择了</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a><a href="#安装-1" title="安装"></a>安装</h3><p>终端输入<br><code>sudo apt-get install slingscold</code></p>
+<h3 id="将Slingscold固定在Dock上"><a href="#将Slingscold固定在Dock上" class="headerlink" title="将Slingscold固定在Dock上"></a><a href="#将Slingscold固定在Dock上" title="将Slingscold固定在Dock上"></a>将Slingscold固定在Dock上</h3><p>Dash to Dock：打开<code>所有应用程序</code>，然后拖到Dock就好了<br>Docky &amp; Plank：进入文件夹<code>/usr/share/applications</code>，找到<code>Slingscold</code>，拖到Dock上就好了</p>
+<h2 id="Spotlight"><a href="#Spotlight" class="headerlink" title="Spotlight"></a><a href="#Spotlight" title="Spotlight"></a>Spotlight</h2><p>Spotlight是在Mac上很nb的一个神奇搜索功能，虽然Linux下没有完全替代品，但是Albert仿的很不错。</p>
+<h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a><a href="#安装-2" title="安装"></a>安装</h3><p>终端输入<br><code>sudo apt-get install albert</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><a href="#配置" title="配置"></a>配置</h3><p>进入Launchpad，打开Albert，之后按<code>Alt+Q</code>（默认快捷键）打开它<br>你会发现它右上角有个小小的、旋转的设置按钮，点进去<br>在<code>Generals</code>里可以修改快捷键、各种设置等<br>建议修改为图中样式（快捷键可以自己设）<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet1.png" alt="albert"><br>Plugins是各种功能的设置，建议不要打开浏览器收藏（<code>... Bookmarks</code>）功能，有可能导致浏览器中无法使用收藏<br>顺便给出会话管理（<code>System</code>）功能、网页搜索功能（<code>WebSearch</code>）的建议设置<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet2.png" alt="albert"><br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet3.png" alt="albert"></p>
+<h3 id="固定到顶栏"><a href="#固定到顶栏" class="headerlink" title="固定到顶栏"></a><a href="#固定到顶栏" title="固定到顶栏"></a>固定到顶栏</h3><p>见文首链接，安装插件<code>Top bar script executor</code><br>进入它的设置，点击下面按钮<code>Add</code>，设为图中设置后按OK<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/topBarExecute.png" alt="albert"><br>接下来关掉它的设置，按<code>Alt+F2</code>，输入<code>r</code>回车重新启动GNOME Shell<br>重启好了之后你就会发现上面有了一个搜索按钮</p>
+<h2 id="主题和图标"><a href="#主题和图标" class="headerlink" title="主题和图标"></a><a href="#主题和图标" title="主题和图标"></a>主题和图标</h2><p>终端输入<br><code>sudo apt-get install macbuntu-os-icons-v1804 macbuntu-os-ithemes-v1804 macbuntu-os-plank-theme-v1804</code><br>就会安装Macbuntu的主题、图标和Plank主题<br>Plank主题参照上文配置<br>打开GNOME Tweaks，将左侧栏<code>外观</code>中的<code>应用程序</code> <code>光标</code> <code>图标</code>设成Macbuntu的<br>推荐主题是MacBuntu-OS11或MacBuntu-OS-MJ</p>
+<h2 id="启动、登录界面"><a href="#启动、登录界面" class="headerlink" title="启动、登录界面"></a><a href="#启动、登录界面" title="启动、登录界面"></a>启动、登录界面</h2><h3 id="添加软件源-1"><a href="#添加软件源-1" class="headerlink" title="添加软件源"></a><a href="#添加软件源-1" title="添加软件源"></a>添加软件源</h3><p>终端输入<br><code>sudo add-apt-repository ppa:noobslab/themes</code></p>
+<h3 id="启动界面"><a href="#启动界面" class="headerlink" title="启动界面"></a><a href="#启动界面" title="启动界面"></a>启动界面</h3><p>看起来差不多这个样子<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/boot.jpg" alt><br>安装：终端输入<br><code>sudo apt-get install macbuntu-os-bscreen-lts-v7</code><br>想恢复成原来的？<br><code>sudo apt-get autoremove macbuntu-os-bscreen-lts-v7</code>（暴力卸载解决一切问题。。。）</p>
+<h3 id="登录界面（有风险，需谨慎）"><a href="#登录界面（有风险，需谨慎）" class="headerlink" title="登录界面（有风险，需谨慎）"></a><a href="#登录界面（有风险，需谨慎）" title="登录界面（有风险，需谨慎）"></a>登录界面（有风险，需谨慎）</h3><p>看起来差不多这个样子<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/log.jpg" alt><br>安装：终端输入<br><code>sudo apt-get install macbuntu-os-lightdm-lts-v7</code><br>想恢复？同样暴力卸载。。。<br><code>sudo apt-get autoremove macbuntu-os-lightdm-lts-v7</code></p>
+<h2 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a><a href="#壁纸" title="壁纸"></a>壁纸</h2><p><a href="/uploads/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/All-Mojave-Wallpapers.zip">下载Mac OS X Mojave的壁纸</a><br>对着图片右键，点击<code>设为壁纸</code>即可</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/GNOME/" rel="tag"># GNOME</a>
+          
+            <a href="/tags/Mac-OS/" rel="tag"># Mac OS</a>
+          
+            <a href="/tags/OSX/" rel="tag"># OSX</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/20/Ubuntu-18-04-LTS-美化-终端-Oh-my-zsh/" rel="next" title="Ubuntu 18.04 LTS 美化 - 终端 Oh-my-zsh ">
+                <i class="fa fa-chevron-left"></i> Ubuntu 18.04 LTS 美化 - 终端 Oh-my-zsh 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Zimo</p>
+              <div class="site-description motion-element" itemprop="description">蒟蒻的blog</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/ZimoCP" title="GitHub &rarr; https://github.com/ZimoCP" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:huangzimocp@126.com" title="Email &rarr; mailto:huangzimocp@126.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>Email</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://www.luogu.org/space/show?uid=59140" title="洛谷 &rarr; https://www.luogu.org/space/show?uid=59140" rel="noopener" target="_blank"><i class="fa fa-fw fa-code"></i>洛谷</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://blog.csdn.net/ZimoCP" title="CSDN &rarr; https://blog.csdn.net/ZimoCP" rel="noopener" target="_blank"><i class="fa fa-fw fa-copyright"></i>CSDN</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.luogu.org/team/show?teamid=7544" title="https://www.luogu.org/team/show?teamid=7544" rel="noopener" target="_blank">诸侯联盟洛谷团队</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhlm.cf/" title="https://www.zhlm.cf/" rel="noopener" target="_blank">诸侯联盟</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装GNOME-Tweaks"><span class="nav-number">1.</span> <span class="nav-text">安装GNOME Tweaks</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加软件源"><span class="nav-number">2.</span> <span class="nav-text">添加软件源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dock"><span class="nav-number">3.</span> <span class="nav-text">Dock</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">3.1.</span> <span class="nav-text">安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Docky"><span class="nav-number">3.1.1.</span> <span class="nav-text">Docky</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plank"><span class="nav-number">3.1.2.</span> <span class="nav-text">Plank</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Dash-to-Dock"><span class="nav-number">3.1.3.</span> <span class="nav-text">Dash to Dock</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐主题（仅推荐，并不一定仿Mac）"><span class="nav-number">3.2.</span> <span class="nav-text">推荐主题（仅推荐，并不一定仿Mac）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Docky：EnigmoDarky"><span class="nav-number">3.2.1.</span> <span class="nav-text">Docky：EnigmoDarky</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题"><span class="nav-number">3.2.2.</span> <span class="nav-text">Plank：Frost，Mac OS Themes，MacBuntu的Plank主题</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏原Dash"><span class="nav-number">3.3.</span> <span class="nav-text">隐藏原Dash</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动Dock"><span class="nav-number">3.4.</span> <span class="nav-text">启动Dock</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dock开机启动"><span class="nav-number">3.5.</span> <span class="nav-text">Dock开机启动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐藏Docky最左侧的图标"><span class="nav-number">3.6.</span> <span class="nav-text">隐藏Docky最左侧的图标</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Launchpad"><span class="nav-number">4.</span> <span class="nav-text">Launchpad</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-1"><span class="nav-number">4.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#将Slingscold固定在Dock上"><span class="nav-number">4.2.</span> <span class="nav-text">将Slingscold固定在Dock上</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spotlight"><span class="nav-number">5.</span> <span class="nav-text">Spotlight</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-2"><span class="nav-number">5.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">5.2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#固定到顶栏"><span class="nav-number">5.3.</span> <span class="nav-text">固定到顶栏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题和图标"><span class="nav-number">6.</span> <span class="nav-text">主题和图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#启动、登录界面"><span class="nav-number">7.</span> <span class="nav-text">启动、登录界面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加软件源-1"><span class="nav-number">7.1.</span> <span class="nav-text">添加软件源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#启动界面"><span class="nav-number">7.2.</span> <span class="nav-text">启动界面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#登录界面（有风险，需谨慎）"><span class="nav-number">7.3.</span> <span class="nav-text">登录界面（有风险，需谨慎）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#壁纸"><span class="nav-number">8.</span> <span class="nav-text">壁纸</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zimo</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.0"></script>
+
+  <script src="/js/motion.js?v=7.1.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.0"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

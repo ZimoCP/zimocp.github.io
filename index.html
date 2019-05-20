@@ -16,7 +16,7 @@
 
 <html class="theme-next gemini use-motion" lang="modifiedzh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -160,7 +160,7 @@
   .use-motion .logo-line-before i { left: initial; }
   .use-motion .logo-line-after i { right: initial; }
   </style>
-</noscript>
+</noscript><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 </head>
 
@@ -171,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left 
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
   page-home">
     <div class="headband"></div>
 
@@ -352,6 +352,736 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zimo">
+      <meta itemprop="description" content="蒟蒻的blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zimo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/20/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/" class="post-title-link" itemprop="url">Ubuntu 18.04 LTS 美化 - 仿Mac OS X</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-20 21:25:42 / 修改时间：21:26:43" itemprop="dateCreated datePublished" datetime="2019-05-20T21:25:42+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/GNOME/" itemprop="url" rel="index"><span itemprop="name">GNOME</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>效果图<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/mac-os-x-like-ubuntu.png" alt></p>
+<p><strong>请先去看<a href="https://zimocp.github.io/2019/04/17/Ubuntu-18-04-LTS-%E7%BE%8E%E5%8C%96/">这里</a>，特别是第八步（GNOME插件安装）</strong></p>
+<h2 id="安装GNOME-Tweaks"><a href="#安装GNOME-Tweaks" class="headerlink" title="安装GNOME Tweaks"></a><a href="#安装GNOME-Tweaks" title="安装GNOME Tweaks"></a>安装GNOME Tweaks</h2><p>见上文链接</p>
+<h2 id="添加软件源"><a href="#添加软件源" class="headerlink" title="添加软件源"></a><a href="#添加软件源" title="添加软件源"></a>添加软件源</h2><p>终端输入<br><code>sudo add-apt-repository ppa:noobslab/macbuntu</code></p>
+<h2 id="Dock"><a href="#Dock" class="headerlink" title="Dock"></a><a href="#Dock" title="Dock"></a>Dock</h2><p>Dock作为Mac的灵魂肯定要第一个讲。<br>对于Dock有3种方案：Docky, Plank和Dash to Dock。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a><a href="#安装" title="安装"></a>安装</h3><h4 id="Docky"><a href="#Docky" class="headerlink" title="Docky"></a><a href="#Docky" title="Docky"></a>Docky</h4><p>耗能较大，空间较多，功能较多，易崩溃（毕竟一个Dock耗能再多也比GNOME默认的Dash少。。。）<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/docky.png" alt="docky"><br>安装：终端输入<code>sudo apt-get install docky</code></p>
+<h4 id="Plank"><a href="#Plank" class="headerlink" title="Plank"></a><a href="#Plank" title="Plank"></a>Plank</h4><p>耗能很少，空间少，功能有限，简洁的一匹，几乎不崩溃（推荐，如果只想要一个单纯的Dock就选这个好了）<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/plank.png" alt="plank"><br>安装：终端输入<code>sudo apt-get install plank</code></p>
+<h4 id="Dash-to-Dock"><a href="#Dash-to-Dock" class="headerlink" title="Dash to Dock"></a><a href="#Dash-to-Dock" title="Dash to Dock"></a>Dash to Dock</h4><p>GNOME插件，耗能咕咕咕，bug多，功能有限，几乎不崩溃（不推荐，但是有自适应透明度、配合GNOME原生应用程序菜单）<br>效果图没有<br><a href="https://extensions.gnome.org/extension/307/dash-to-dock/" target="_blank" rel="noopener">安装</a></p>
+<h3 id="推荐主题（仅推荐，并不一定仿Mac）"><a href="#推荐主题（仅推荐，并不一定仿Mac）" class="headerlink" title="推荐主题（仅推荐，并不一定仿Mac）"></a><a href="#推荐主题（仅推荐，并不一定仿Mac）" title="推荐主题（仅推荐，并不一定仿Mac）"></a>推荐主题（仅推荐，并不一定仿Mac）</h3><h4 id="Docky：EnigmoDarky"><a href="#Docky：EnigmoDarky" class="headerlink" title="Docky：EnigmoDarky"></a><a href="#Docky：EnigmoDarky" title="Docky：EnigmoDarky"></a>Docky：EnigmoDarky</h4><p><a href="/upload/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/EnigmoDarky.tar">下载</a><br>安装方法：找到Docky第一个按钮左键（或在Docky部件和各种程序之间会由一个分割线，右键它，点击设置），<code>主题</code>的后面有<code>安装</code>，点击后选择下下来的tar压缩包即可<br>食用方法：做完上一步之后就不用我说了吧？</p>
+<h4 id="Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题"><a href="#Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题" class="headerlink" title="Plank：Frost，Mac OS Themes，MacBuntu的Plank主题"></a><a href="#Plank：Frost，Mac-OS-Themes，MacBuntu的Plank主题" title="Plank：Frost，Mac OS Themes，MacBuntu的Plank主题"></a>Plank：Frost，Mac OS Themes，MacBuntu的Plank主题</h4><p><a href="/upload/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/frost-plank-theme-2.2.1.zip">下载Frost</a>，<a href="/upload/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/plank-macOS-Themes-Pack.zip">下载Mac OS Themes</a><br>安装方法：<br>Frost：在解压后的文件夹里找到名为<code>Frost</code>的文件夹，将他复制到<code>~/.local/share/plank/themes</code>里（没有就创建）<br>Mac OS Themes：解压后进入文件夹，你会看到一大堆主题，根据名字复制你需要的文件夹到<code>~/.local/share/plank/themes</code>里（没有就创建）<br>MacBuntu：见下文<br>食用方法：在Plank上<code>Ctrl+右键</code>，点击<code>首选项</code>，然后就不用我说了吧？</p>
+<h3 id="隐藏原Dash"><a href="#隐藏原Dash" class="headerlink" title="隐藏原Dash"></a><a href="#隐藏原Dash" title="隐藏原Dash"></a>隐藏原Dash</h3><p>（打算使用Dash to Dock作为Dock的跳过此步）<br>见上文安装<code>Dash to Dock</code><br>安装好之后进入GNOME Tweaks，进入左侧栏<code>插件</code>，将Dash to Dock打开（开了以后可以试试关了它，如果发现没有变回Ubuntu默认dash，那么就一直把他关着好了）<br>点击Dash to Dock的设置按钮，打开<code>自动隐藏</code>，把两个开关都关掉，你会发现你找不到Dash了</p>
+<h3 id="启动Dock"><a href="#启动Dock" class="headerlink" title="启动Dock"></a><a href="#启动Dock" title="启动Dock"></a>启动Dock</h3><p>（打算使用Dash to Dock作为Dock的跳过此步）<br>按下<code>Alt+F2</code>，输入<code>docky</code>（或<code>plank</code>），回车</p>
+<h3 id="Dock开机启动"><a href="#Dock开机启动" class="headerlink" title="Dock开机启动"></a><a href="#Dock开机启动" title="Dock开机启动"></a>Dock开机启动</h3><p>（打算使用Dash to Dock作为Dock的跳过此步）<br>打开GNOME Tweaks，左侧栏进入开机启动程序，</p>
+<h3 id="隐藏Docky最左侧的图标"><a href="#隐藏Docky最左侧的图标" class="headerlink" title="隐藏Docky最左侧的图标"></a><a href="#隐藏Docky最左侧的图标" title="隐藏Docky最左侧的图标"></a>隐藏Docky最左侧的图标</h3><p>（不使用Docky作为Dock的跳过此步）<br>终端输入，安装Gconf编辑器<br><code>sudo apt-get install gconf-editor</code><br>打开gconf（<code>配置编辑器</code>），按照图中的样子打开<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/gconfEditorDockyIcon.png" alt="docky"><br>将右侧的<code>ShowDockyItem</code>取消勾选，关掉gconf就生效了</p>
+<h2 id="Launchpad"><a href="#Launchpad" class="headerlink" title="Launchpad"></a><a href="#Launchpad" title="Launchpad"></a>Launchpad</h2><p>Slingscold是一个比GNOME原生启动器轻量的多的多的多的全屏启动器，虽然不是很像Mac但是是最好的选择了</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a><a href="#安装-1" title="安装"></a>安装</h3><p>终端输入<br><code>sudo apt-get install slingscold</code></p>
+<h3 id="将Slingscold固定在Dock上"><a href="#将Slingscold固定在Dock上" class="headerlink" title="将Slingscold固定在Dock上"></a><a href="#将Slingscold固定在Dock上" title="将Slingscold固定在Dock上"></a>将Slingscold固定在Dock上</h3><p>Dash to Dock：打开<code>所有应用程序</code>，然后拖到Dock就好了<br>Docky &amp; Plank：进入文件夹<code>/usr/share/applications</code>，找到<code>Slingscold</code>，拖到Dock上就好了</p>
+<h2 id="Spotlight"><a href="#Spotlight" class="headerlink" title="Spotlight"></a><a href="#Spotlight" title="Spotlight"></a>Spotlight</h2><p>Spotlight是在Mac上很nb的一个神奇搜索功能，虽然Linux下没有完全替代品，但是Albert仿的很不错。</p>
+<h3 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a><a href="#安装-2" title="安装"></a>安装</h3><p>终端输入<br><code>sudo apt-get install albert</code></p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a><a href="#配置" title="配置"></a>配置</h3><p>进入Launchpad，打开Albert，之后按<code>Alt+Q</code>（默认快捷键）打开它<br>你会发现它右上角有个小小的、旋转的设置按钮，点进去<br>在<code>Generals</code>里可以修改快捷键、各种设置等<br>建议修改为图中样式（快捷键可以自己设）<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet1.png" alt="albert"><br>Plugins是各种功能的设置，建议不要打开浏览器收藏（<code>... Bookmarks</code>）功能，有可能导致浏览器中无法使用收藏<br>顺便给出会话管理（<code>System</code>）功能、网页搜索功能（<code>WebSearch</code>）的建议设置<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet2.png" alt="albert"><br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/albertSet3.png" alt="albert"></p>
+<h3 id="固定到顶栏"><a href="#固定到顶栏" class="headerlink" title="固定到顶栏"></a><a href="#固定到顶栏" title="固定到顶栏"></a>固定到顶栏</h3><p>见文首链接，安装插件<code>Top bar script executor</code><br>进入它的设置，点击下面按钮<code>Add</code>，设为图中设置后按OK<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/topBarExecute.png" alt="albert"><br>接下来关掉它的设置，按<code>Alt+F2</code>，输入<code>r</code>回车重新启动GNOME Shell<br>重启好了之后你就会发现上面有了一个搜索按钮</p>
+<h2 id="主题和图标"><a href="#主题和图标" class="headerlink" title="主题和图标"></a><a href="#主题和图标" title="主题和图标"></a>主题和图标</h2><p>终端输入<br><code>sudo apt-get install macbuntu-os-icons-v1804 macbuntu-os-ithemes-v1804 macbuntu-os-plank-theme-v1804</code><br>就会安装Macbuntu的主题、图标和Plank主题<br>Plank主题参照上文配置<br>打开GNOME Tweaks，将左侧栏<code>外观</code>中的<code>应用程序</code> <code>光标</code> <code>图标</code>设成Macbuntu的<br>推荐主题是MacBuntu-OS11或MacBuntu-OS-MJ</p>
+<h2 id="启动、登录界面"><a href="#启动、登录界面" class="headerlink" title="启动、登录界面"></a><a href="#启动、登录界面" title="启动、登录界面"></a>启动、登录界面</h2><h3 id="添加软件源-1"><a href="#添加软件源-1" class="headerlink" title="添加软件源"></a><a href="#添加软件源-1" title="添加软件源"></a>添加软件源</h3><p>终端输入<br><code>sudo add-apt-repository ppa:noobslab/themes</code></p>
+<h3 id="启动界面"><a href="#启动界面" class="headerlink" title="启动界面"></a><a href="#启动界面" title="启动界面"></a>启动界面</h3><p>看起来差不多这个样子<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/boot.jpg" alt><br>安装：终端输入<br><code>sudo apt-get install macbuntu-os-bscreen-lts-v7</code><br>想恢复成原来的？<br><code>sudo apt-get autoremove macbuntu-os-bscreen-lts-v7</code>（暴力卸载解决一切问题。。。）</p>
+<h3 id="登录界面（有风险，需谨慎）"><a href="#登录界面（有风险，需谨慎）" class="headerlink" title="登录界面（有风险，需谨慎）"></a><a href="#登录界面（有风险，需谨慎）" title="登录界面（有风险，需谨慎）"></a>登录界面（有风险，需谨慎）</h3><p>看起来差不多这个样子<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/log.jpg" alt><br>安装：终端输入<br><code>sudo apt-get install macbuntu-os-lightdm-lts-v7</code><br>想恢复？同样暴力卸载。。。<br><code>sudo apt-get autoremove macbuntu-os-lightdm-lts-v7</code></p>
+<h2 id="壁纸"><a href="#壁纸" class="headerlink" title="壁纸"></a><a href="#壁纸" title="壁纸"></a>壁纸</h2><p><a href="/uploads/Ubuntu-18-04-LTS-美化-仿Mac-OS-X/All-Mojave-Wallpapers.zip">下载Mac OS X Mojave的壁纸</a><br>对着图片右键，点击<code>设为壁纸</code>即可</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化-终端-Oh-my-zsh/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zimo">
+      <meta itemprop="description" content="蒟蒻的blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zimo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/20/Ubuntu-18-04-LTS-美化-终端-Oh-my-zsh/" class="post-title-link" itemprop="url">Ubuntu 18.04 LTS 美化 - 终端 Oh-my-zsh </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-20 21:24:03 / 修改时间：21:25:11" itemprop="dateCreated datePublished" datetime="2019-05-20T21:24:03+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Zsh/" itemprop="url" rel="index"><span itemprop="name">Zsh</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>效果图</p>
+<p><img src="/images/Ubuntu-18-04-LTS-美化-终端-Oh-my-zsh/ubuntu-oh-my-zsh.png" alt="Ubuntu Oh-my-Zsh"></p>
+<h2 id="安装Zsh，终端输入"><a href="#安装Zsh，终端输入" class="headerlink" title="安装Zsh，终端输入"></a><a href="#安装Zsh，终端输入" title="安装Zsh，终端输入"></a>安装Zsh，终端输入</h2><p><code>sudo apt-get install zsh</code></p>
+<h2 id="将Zsh设为默认终端"><a href="#将Zsh设为默认终端" class="headerlink" title="将Zsh设为默认终端"></a><a href="#将Zsh设为默认终端" title="将Zsh设为默认终端"></a>将Zsh设为默认终端</h2><p><code>chsh -s $(which zsh)</code><br>恢复为bash：<code>chsh -s /bin/bash</code></p>
+<h2 id="不要着急注销重新登录，Zsh配置超级狗蛋，先装好Oh-my-zsh，终端输入"><a href="#不要着急注销重新登录，Zsh配置超级狗蛋，先装好Oh-my-zsh，终端输入" class="headerlink" title="不要着急注销重新登录，Zsh配置超级狗蛋，先装好Oh-my-zsh，终端输入"></a><a href="#不要着急注销重新登录，Zsh配置超级狗蛋，先装好Oh-my-zsh，终端输入" title="不要着急注销重新登录，Zsh配置超级狗蛋，先装好Oh-my-zsh，终端输入"></a><strong>不要着急注销重新登录，Zsh配置超级狗蛋，先装好Oh-my-zsh</strong>，终端输入</h2><ol>
+<li>curl方式<br><code>sh -c &quot;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;</code></li>
+<li>wget方式<br><code>wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh</code><br>装好后注销重新登录，再打开终端，可以发现终端前面是个箭头了</li>
+</ol>
+<h2 id="配置Zsh"><a href="#配置Zsh" class="headerlink" title="配置Zsh"></a><a href="#配置Zsh" title="配置Zsh"></a>配置Zsh</h2><p><strong>Home和End键可能会失效，那么就用<code>Ctrl+A</code>和<code>Ctrl+E</code></strong><br>但我个人认为默认主题不太好看，我最喜欢Agnoster（当然你可以用其他的主题，百度一下就好了）</p>
+<h3 id="Agnoster主题配置"><a href="#Agnoster主题配置" class="headerlink" title="Agnoster主题配置"></a><a href="#Agnoster主题配置" title="Agnoster主题配置"></a>Agnoster主题配置</h3><p>进入主文件夹，按<code>Ctrl+H</code>显示隐藏文件，打开<code>.zshrc</code><br>Gedit里按<code>Ctrl+F</code>搜索<code>ZSH_THEME</code>，等号后面的值改为<code>agnoster</code><br>重开终端就会发现有一些颜色了，并且字体咕咕咕。。。。</p>
+<p>因为Agnoster用了Powerline字体，通常直接apt安装就好了，终端输入<br><code>sudo apt-get install fonts-powerline</code><br>重启终端，如果还是不行，那只好<a href="https://github.com/powerline/fonts" target="_blank" rel="noopener">去Github下载</a>（我就不讲了，自己看文档吧。。。）</p>
+<h3 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a><a href="#配置插件" title="配置插件"></a>配置插件</h3><p>推荐插件：wd, zsh-autosuggestions, zsh-syntax-highlighting</p>
+<h5 id="wd"><a href="#wd" class="headerlink" title="wd"></a><a href="#wd" title="wd"></a>wd</h5><ul>
+<li>用途：终端中快速跳转到常用的文件夹</li>
+<li>安装：按照前文方法打开<code>.zshrc</code>，搜索<code>plugins</code>，在后括号<code>)</code>前面加上<code>wd</code>（一定要有空格！），重启终端即可</li>
+<li>食用方法：终端中用<code>cd</code>进入你想要设置的文件夹，输入<code>wd add 你想要的名字</code>，以后就可以用<code>wd 你设置的名字</code>来快速打开了</li>
+</ul>
+<h5 id="zsh-autosuggestions"><a href="#zsh-autosuggestions" class="headerlink" title="zsh-autosuggestions"></a><a href="#zsh-autosuggestions" title="zsh-autosuggestions"></a>zsh-autosuggestions</h5><ul>
+<li>用途：自动补全，来源是终端食用历史</li>
+<li>安装：终端输入<br><code>git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions</code><br>然后打开<code>.zshrc</code>，在最后添加一句<code>source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh</code></li>
+<li>食用方法：终端里输入命令，如果有历史匹配的话后面会显示灰色（？）的字（提示），可以按<code>→</code>或<code>End</code>补全</li>
+</ul>
+<h5 id="zsh-syntax-highlighting"><a href="#zsh-syntax-highlighting" class="headerlink" title="zsh-syntax-highlighting"></a><a href="#zsh-syntax-highlighting" title="zsh-syntax-highlighting"></a>zsh-syntax-highlighting</h5><ul>
+<li>用途：高亮，对的是绿色，错的是红色粗体，路径是白色下划线</li>
+<li>安装：终端输入<br><code>git clone https://github.com/zsh-users/zsh-syntax-highlighting.git</code><br>然后打开<code>.zshrc</code>，在最后添加一句<code>source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh</code></li>
+<li>食用方法：这个不用说了吧？</li>
+</ul>
+<h3 id="调整终端配色"><a href="#调整终端配色" class="headerlink" title="调整终端配色"></a><a href="#调整终端配色" title="调整终端配色"></a>调整终端配色</h3><p>打开终端，界面上右键，点击<code>配置文件首选项</code><br>然后点击上面一栏中的<code>颜色</code>，自己调一调吧</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化-仿Windows/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zimo">
+      <meta itemprop="description" content="蒟蒻的blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zimo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/20/Ubuntu-18-04-LTS-美化-仿Windows/" class="post-title-link" itemprop="url">Ubuntu 18.04 LTS 美化 - 仿Windows</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-20 21:22:52 / 修改时间：21:23:29" itemprop="dateCreated datePublished" datetime="2019-05-20T21:22:52+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/GNOME/" itemprop="url" rel="index"><span itemprop="name">GNOME</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>效果图</p>
+<p><img src="/images/Ubuntu-18-04-LTS-美化-仿Windows/windows-like-ubuntu.png" alt="Ubuntu仿Windows">  </p>
+<p><strong>请先去看<a href="https://zimocp.github.io/2019/04/17/Ubuntu-18-04-LTS-%E7%BE%8E%E5%8C%96/">这里</a>，特别是第八步（GNOME插件安装）</strong></p>
+<h2 id="安装GNOME-Tweaks"><a href="#安装GNOME-Tweaks" class="headerlink" title="安装GNOME Tweaks"></a><a href="#安装GNOME-Tweaks" title="安装GNOME Tweaks"></a>安装GNOME Tweaks</h2><p>见上文链接</p>
+<h2 id="安装GNOME插件"><a href="#安装GNOME插件" class="headerlink" title="安装GNOME插件"></a><a href="#安装GNOME插件" title="安装GNOME插件"></a>安装GNOME插件</h2><p>用上文链接方法安装<a href="https://extensions.gnome.org/extension/1160/dash-to-panel/" target="_blank" rel="noopener">插件<code>Dash to Panel</code></a><br>打开GNOME Tweaks（优化），找到左侧栏<code>扩展</code><br>将<code>Dash to panel</code>打开，你会发现底下有了一条状态+任务栏</p>
+<h2 id="配置插件"><a href="#配置插件" class="headerlink" title="配置插件"></a><a href="#配置插件" title="配置插件"></a>配置插件</h2><p>点击优化-&gt;扩展-&gt;<code>Dash to panel</code>右边开关左边的设置按钮，自己捣鼓一下吧</p>
+<h2 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a><a href="#安装主题" title="安装主题"></a>安装主题</h2><p><a href="/upload/Ubuntu-18-04-LTS-美化-仿Windows/Windows-10-2.1.zip">下载Windows 10主题</a><br>暗色主题我就没有下了，如果想要的话就<a href="https://github.com/B00merang-Project/Windows-10-Dark" target="_blank" rel="noopener">去Github下好了</a><br>下下来之后解压zip（右键点击<code>解压到此处</code>），把解压后的文件夹复制到主文件夹<code>.themes</code>（没有？先按<code>Ctrl+H</code>显示隐藏文件，还没有就新建）<br>打开GNOME Tweak，将图中高亮的设置设好<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Windows/windows-like-ubuntu-3.png" alt><br>接下来你会发现界面变了个样子（虽然我觉得并没有那么像Windows，但是是我找到最像的了）</p>
+<h2 id="安装图标"><a href="#安装图标" class="headerlink" title="安装图标"></a><a href="#安装图标" title="安装图标"></a>安装图标</h2><p><a href="/upload/Ubuntu-18-04-LTS-美化-仿Windows/Windows-10-icon.zip">下载图标</a><br>下下来之后解压zip（右键点击<code>解压到此处</code>），把解压后的文件夹复制到主文件夹<code>.icon</code>（没有？先按<code>Ctrl+H</code>显示隐藏文件，还没有就新建）<br>打开GNOME Tweak，将图中高亮的设置设好<br><img src="/images/Ubuntu-18-04-LTS-美化-仿Windows/windows-like-ubuntu-4.png" alt><br>接下来你会发现图标变了个样子<br>（Ctrl+C Ctrl+V最好van了）</p>
+<h2 id="设置按Super键（Windows键）打开所有应用程序菜单"><a href="#设置按Super键（Windows键）打开所有应用程序菜单" class="headerlink" title="设置按Super键（Windows键）打开所有应用程序菜单"></a><a href="#设置按Super键（Windows键）打开所有应用程序菜单" title="设置按Super键（Windows键）打开所有应用程序菜单"></a>设置按Super键（Windows键）打开<code>所有应用程序</code>菜单</h2><p>终端输入  </p>
+<p>1<br>2<br>3<br>4<br>5  </p>
+<p>gsettings set org.gnome.mutter overlay-key ‘’<br>gsettings set org.gnome.shell.keybindings toggle-application-view “[‘Super_L’,’Super_R’]“<br>```<br>之后按按Super键（左右都试试），哇！<br>恢复默认：终端输入  </p>
+<p>gsettings set org.gnome.mutter overlay-key ‘Super_L’<br>gsettings set org.gnome.shell.keybindings toggle-application-view “[‘A’]”<br><code>`</code></p>
+<h2 id="设置左下角图标"><a href="#设置左下角图标" class="headerlink" title="设置左下角图标"></a><a href="#设置左下角图标" title="设置左下角图标"></a>设置左下角图标</h2><p><a href="/images/Ubuntu-18-04-LTS-美化-仿Windows/windows-7-start-green.png">Windows7图标（我只在Windows里找到绿的。。。）</a><br><a href="/images/Ubuntu-18-04-LTS-美化-仿Windows/windows-10-start-green.png">Windows10的透明背景的图标我乱咔了一个</a><br>下载上面你更喜欢的图标，然后右键左下角9个点图标，点进<code>Dash to Panel Settings</code>可以快速进入设置<br>进入设置，进入最上面一栏的<code>行为</code>，你会在下面看到”显示<strong>应用</strong>图标”，点击左边的设置键，有一个<code>自定义...图像</code>，选中你刚下载的那个就OK啦</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a><a href="#背景" title="背景"></a>背景</h2><p><a href="/images/Ubuntu-18-04-LTS-美化-仿Windows/windows10bckgrd.jpg">下载Windows10背景</a><br>右键选择<code>设为背景</code>即可</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zimocp.github.io/2019/05/20/Ubuntu-18-04-LTS-美化/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zimo">
+      <meta itemprop="description" content="蒟蒻的blog">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zimo's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/20/Ubuntu-18-04-LTS-美化/" class="post-title-link" itemprop="url">Ubuntu 18.04 LTS 美化</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-20 21:21:07 / 修改时间：21:27:14" itemprop="dateCreated datePublished" datetime="2019-05-20T21:21:07+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/GNOME/" itemprop="url" rel="index"><span itemprop="name">GNOME</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>这篇文章是美化<code>Ubuntu 18.04 LTS</code>的一篇教程，其中有一些步骤不必全部照做，只是我个人喜好</p>
+<h2 id="记住Ubuntu打开终端的快捷键：Ctrl-Alt-T，因为接下来有可能会把Ubuntu左侧启动器隐藏掉，只能用快捷键开终端"><a href="#记住Ubuntu打开终端的快捷键：Ctrl-Alt-T，因为接下来有可能会把Ubuntu左侧启动器隐藏掉，只能用快捷键开终端" class="headerlink" title="*记住Ubuntu打开终端的快捷键：Ctrl+Alt+T，因为接下来有可能会把Ubuntu左侧启动器隐藏掉，只能用快捷键开终端"></a><a href="#记住Ubuntu打开终端的快捷键：Ctrl-Alt-T，因为接下来有可能会把Ubuntu左侧启动器隐藏掉，只能用快捷键开终端" title="*记住Ubuntu打开终端的快捷键：Ctrl+Alt+T，因为接下来有可能会把Ubuntu左侧启动器隐藏掉，只能用快捷键开终端"></a>*记住Ubuntu打开终端的快捷键：<code>Ctrl+Alt+T</code>，因为接下来有可能会把Ubuntu左侧启动器隐藏掉，只能用快捷键开终端</h2><h2 id="记住sudo命令的作用：用管理员权限运行接下来的命令，如果当前终端没有输过密码的话会让你输密码（会隐藏的，放心不会被别人看到）"><a href="#记住sudo命令的作用：用管理员权限运行接下来的命令，如果当前终端没有输过密码的话会让你输密码（会隐藏的，放心不会被别人看到）" class="headerlink" title="*记住sudo命令的作用：用管理员权限运行接下来的命令，如果当前终端没有输过密码的话会让你输密码（会隐藏的，放心不会被别人看到）"></a><a href="#记住sudo命令的作用：用管理员权限运行接下来的命令，如果当前终端没有输过密码的话会让你输密码（会隐藏的，放心不会被别人看到）" title="*记住sudo命令的作用：用管理员权限运行接下来的命令，如果当前终端没有输过密码的话会让你输密码（会隐藏的，放心不会被别人看到）"></a>*记住<code>sudo</code>命令的作用：用管理员权限运行接下来的命令，如果当前终端没有输过密码的话会让你输密码（会隐藏的，放心不会被别人看到）</h2><h2 id="安装GNOME优化工具（常用）：终端输入"><a href="#安装GNOME优化工具（常用）：终端输入" class="headerlink" title="*安装GNOME优化工具（常用）：终端输入"></a><a href="#安装GNOME优化工具（常用）：终端输入" title="*安装GNOME优化工具（常用）：终端输入"></a>*安装GNOME优化工具（常用）：终端输入</h2><p><code>sudo apt-get install gnome-tweak-tool</code></p>
+<h2 id="美化终端"><a href="#美化终端" class="headerlink" title="美化终端"></a><a href="#美化终端" title="美化终端"></a>美化终端</h2><p><a href="https://zimocp.github.io/2019/04/17/Ubuntu-18-04-LTS-%E7%BE%8E%E5%8C%96-%E7%BB%88%E7%AB%AF-Oh-my-zsh/">传送</a></p>
+<h2 id="美化界面"><a href="#美化界面" class="headerlink" title="美化界面"></a><a href="#美化界面" title="美化界面"></a>美化界面</h2><p><a href="https://zimocp.github.io/2019/04/17/Ubuntu-18-04-LTS-%E7%BE%8E%E5%8C%96-%E4%BB%BFWindows/">仿Windows 10</a>，<br><a href="https://zimocp.github.io/2019/04/19/Ubuntu-18-04-LTS-%E7%BE%8E%E5%8C%96-%E4%BB%BFMac-OS-X/">仿Mac OS X</a>  </p>
+<h2 id="更改开机样式"><a href="#更改开机样式" class="headerlink" title="更改开机样式"></a><a href="#更改开机样式" title="更改开机样式"></a>更改开机样式</h2><h3 id="更改GNU-Grub背景（jl紫难受的很）"><a href="#更改GNU-Grub背景（jl紫难受的很）" class="headerlink" title="更改GNU Grub背景（jl紫难受的很）"></a><a href="#更改GNU-Grub背景（jl紫难受的很）" title="更改GNU Grub背景（jl紫难受的很）"></a>更改GNU Grub背景（jl紫难受的很）</h3><p>首先准备一张图片，最好是PNG格式的，然后把他复制到<code>/boot/grub/</code><br>你会发现你在“文件”里找不到/boot，那就终端输入 <code>sudo cp &#39;/你/的/图片/的/路径/和文件名&#39; /boot/grub/</code><br>接下来改一改grub的分辨率，<br><strong>注意：可能会修改炸，修改前先备份：<code>sudo cp /etc/default/grub /etc/default/BeiFen-grub</code></strong><br>终端输入<br><code>sudo gedit /etc/default/grub</code><br>输完密码就会出来一个类似Windows记事本的东西，按<code>Ctrl+F</code>搜索<code>GRUB_GFXMODE</code>，找不到就自己添加一行进去，将其更改为<br><code>GRUB_GFXMODE=你的分辨率x你的分辨率（例如1920x1080）</code><br>最后重新生成Grub的设置就好啦，终端输入<br><code>update-grub</code></p>
+<h3 id="更改启动时界面"><a href="#更改启动时界面" class="headerlink" title="更改启动时界面"></a><a href="#更改启动时界面" title="更改启动时界面"></a>更改启动时界面</h3><p>如果你想要很炫酷的样子，可以去<a href="https://www.gnome-look.org/browse/cat/108/" target="_blank" rel="noopener">GNOME-Look.org</a>或者<a href="https://www.baidu.com/s?wd=Ubuntu%2018.04%20Plymouth%E4%B8%BB%E9%A2%98" target="_blank" rel="noopener">百度搜索<code>Ubuntu 18.04 Plymouth主题</code></a><br>如果你喜欢Ubuntu原本的样子只是讨厌jl紫背景色，修改Plymouth主题就好了<br>终端输入<code>sudo nautilus /usr/share/plymouth</code>可以用管理员权限打开Plymouth文件夹<br>你会看到里面有个themes文件夹，<strong>先备份再修改</strong><br>进入themes文件夹再进里面的ubuntu-logo文件夹，打开<code>ubuntu-logo.script</code>，<code>Ctrl+F</code>搜索<code>Window.SetBackgroundTopColor</code>然后按回车<br>你会看到有<code>Window.SetBackgroundTopColor</code>（渐变色顶端）和<code>Window.SetBackgroundBottomColor</code>（渐变色底端）<br>把它们括号里面的三个值（RGB）改成你想要的颜色就好了，我是用全0.00（也就是黑色）</p>
+<h2 id="更改登录界面背景"><a href="#更改登录界面背景" class="headerlink" title="更改登录界面背景"></a><a href="#更改登录界面背景" title="更改登录界面背景"></a>更改登录界面背景</h2><p>找到一张背景，将他移动到系统背景文件夹（建议不要放在自己用户的主文件夹，有可能会读不到），终端输入<br><code>sudo cp &#39;/你/的/图片/的/路径/和文件名&#39; /usr/share/backgrounds/</code><br>然后修改配置，<br><strong>先备份再修改，<code>sudo cp /etc/alternatives/gdm3.css /etc/alternatives/BeiFen-gdm3.css</code></strong><br>终端输入<br><code>sudo gedit /etc/alternatives/gdm3.css</code><br><code>Ctrl+F</code>搜索<code>lockDialogGroup</code>，默认代码是  </p>
+<p>1<br>2<br>3<br>4  </p>
+<p>#lockDialogGroup {<br> background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);<br> background-repeat: repeat;<br>}  </p>
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#lockDialogGroup &#123;</span><br><span class="line">    background: #2c001e url(file:///你/的/图片/的/路径/和文件名);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>保存重启就ok了</p>
+<h2 id="GNOME插件安装（先装好gnome-tweaks）"><a href="#GNOME插件安装（先装好gnome-tweaks）" class="headerlink" title="GNOME插件安装（先装好gnome-tweaks）"></a><a href="#GNOME插件安装（先装好gnome-tweaks）" title="GNOME插件安装（先装好gnome-tweaks）"></a>GNOME插件安装（先装好gnome-tweaks）</h2><h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a><a href="#安装软件包" title="安装软件包"></a>安装软件包</h3><p>终端输入<br><code>sudo apt-get install chrome-gnome-extension</code><br>（这只是包名，其实里面即支持Chrome也有Firefox）</p>
+<h3 id="浏览器安装插件"><a href="#浏览器安装插件" class="headerlink" title="浏览器安装插件"></a><a href="#浏览器安装插件" title="浏览器安装插件"></a>浏览器安装插件</h3><h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a><a href="#Firefox" title="Firefox"></a>Firefox</h5><p><a href="https://addons.mozilla.org/" target="_blank" rel="noopener">火狐插件商店搜索</a><code>GNOME Shell integration</code></p>
+<h5 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a><a href="#Chrome" title="Chrome"></a>Chrome</h5><p>百度一下，自行搞定（毕竟我没操作过）</p>
+<h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a><a href="#食用方法" title="食用方法"></a>食用方法</h3><p>点击插件图标会打开网站，自己搜索我相信你会用的</p>
+<h3 id="推荐插件"><a href="#推荐插件" class="headerlink" title="推荐插件"></a><a href="#推荐插件" title="推荐插件"></a>推荐插件</h3><h5 id="Top-bar-script-executer"><a href="#Top-bar-script-executer" class="headerlink" title="Top bar script executer"></a><a href="#Top-bar-script-executer" title="Top bar script executer"></a><a href="https://extensions.gnome.org/extension/1154/top-bar-script-executor/" target="_blank" rel="noopener">Top bar script executer</a></h5><p>顶栏快捷方式运行自定义命令</p>
+<h5 id="Keys-indicator"><a href="#Keys-indicator" class="headerlink" title="Keys indicator"></a><a href="#Keys-indicator" title="Keys indicator"></a><a href="https://extensions.gnome.org/extension/1154/top-bar-script-executor/" target="_blank" rel="noopener">Keys indicator</a></h5><p>顶栏显示当前按下了<code>Caps Lock, Num Lock, Ctrl, Shift, Alt</code>中的哪些键</p>
+<h5 id="Hide-activities-button"><a href="#Hide-activities-button" class="headerlink" title="Hide activities button"></a><a href="#Hide-activities-button" title="Hide activities button"></a><a href="https://extensions.gnome.org/extension/1128/hide-activities-button/" target="_blank" rel="noopener">Hide activities button</a></h5><p>隐藏顶栏活动按钮</p>
+<h5 id="Launch"><a href="#Launch" class="headerlink" title="Launch"></a><a href="#Launch" title="Launch"></a><a href="https://extensions.gnome.org/extension/999/launch/" target="_blank" rel="noopener">Launch</a></h5><p>替换顶栏活动按钮为所有应用程序（9个点）</p>
+<h5 id="Hide-top-bar"><a href="#Hide-top-bar" class="headerlink" title="Hide top bar"></a><a href="#Hide-top-bar" title="Hide top bar"></a><a href="https://extensions.gnome.org/extension/545/hide-top-bar/" target="_blank" rel="noopener">Hide top bar</a></h5><p>自动隐藏顶栏</p>
+<h5 id="No-title-bar"><a href="#No-title-bar" class="headerlink" title="No title bar"></a><a href="#No-title-bar" title="No title bar"></a><a href="https://extensions.gnome.org/extension/1267/no-title-bar/" target="_blank" rel="noopener">No title bar</a></h5><p>直接将应用的标题栏和顶栏结合为一体，窗口操作按钮也被放在顶栏上，有些像Unity，节省空间（建议与Hide activities button合用）</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -597,7 +1327,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-07 16:09:09" itemprop="dateModified" datetime="2019-04-07T16:09:09+08:00">2019-04-07</time>
+                <time title="修改时间：2019-04-07 16:49:12" itemprop="dateModified" datetime="2019-04-07T16:49:12+08:00">2019-04-07</time>
               
             
           </span>
@@ -920,7 +1650,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -943,7 +1673,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -972,7 +1706,25 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1200,7 +1952,7 @@
   
 
 
-  <script src="/js/next-boot.js?v=7.1.0"></script>
+  <script src="/js/next-boot.js?v=7.1.0"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
 
   
