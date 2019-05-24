@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Zimo&#39;s Blog">
 <meta property="og:description" content="这篇文章是美化Ubuntu 18.04 LTS的一篇教程，其中有一些步骤不必全部照做，只是我个人喜好">
 <meta property="og:locale" content="modifiedzh-CN">
-<meta property="og:updated_time" content="2019-05-21T05:26:13.234Z">
+<meta property="og:updated_time" content="2019-05-24T05:10:51.569Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 18.04 LTS 美化">
 <meta name="twitter:description" content="这篇文章是美化Ubuntu 18.04 LTS的一篇教程，其中有一些步骤不必全部照做，只是我个人喜好">
@@ -429,7 +429,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-21 13:26:13" itemprop="dateModified" datetime="2019-05-21T13:26:13+08:00">2019-05-21</time>
+                <time title="修改时间：2019-05-24 13:10:51" itemprop="dateModified" datetime="2019-05-24T13:10:51+08:00">2019-05-24</time>
               
             
           </span>
@@ -489,10 +489,9 @@
 <h2 id="更改开机样式"><a href="#更改开机样式" class="headerlink" title="更改开机样式"></a><a href="#更改开机样式" title="更改开机样式"></a>更改开机样式</h2><h3 id="更改GNU-Grub背景（jl紫难受的很）"><a href="#更改GNU-Grub背景（jl紫难受的很）" class="headerlink" title="更改GNU Grub背景（jl紫难受的很）"></a><a href="#更改GNU-Grub背景（jl紫难受的很）" title="更改GNU Grub背景（jl紫难受的很）"></a>更改GNU Grub背景（jl紫难受的很）</h3><p>首先准备一张图片，最好是PNG格式的，然后把他复制到<code>/boot/grub/</code><br>你会发现你在“文件”里找不到/boot，那就终端输入 <code>sudo cp &#39;/你/的/图片/的/路径/和文件名&#39; /boot/grub/</code><br>接下来改一改grub的分辨率，<br><strong>注意：可能会修改炸，修改前先备份：<code>sudo cp /etc/default/grub /etc/default/BeiFen-grub</code></strong><br>终端输入<br><code>sudo gedit /etc/default/grub</code><br>输完密码就会出来一个类似Windows记事本的东西，按<code>Ctrl+F</code>搜索<code>GRUB_GFXMODE</code>，找不到就自己添加一行进去，将其更改为<br><code>GRUB_GFXMODE=你的分辨率x你的分辨率（例如1920x1080）</code><br>最后重新生成Grub的设置就好啦，终端输入<br><code>update-grub</code></p>
 <h3 id="更改启动时界面"><a href="#更改启动时界面" class="headerlink" title="更改启动时界面"></a><a href="#更改启动时界面" title="更改启动时界面"></a>更改启动时界面</h3><p>如果你想要很炫酷的样子，可以去<a href="https://www.gnome-look.org/browse/cat/108/" target="_blank" rel="noopener">GNOME-Look.org</a>或者<a href="https://www.baidu.com/s?wd=Ubuntu%2018.04%20Plymouth%E4%B8%BB%E9%A2%98" target="_blank" rel="noopener">百度搜索<code>Ubuntu 18.04 Plymouth主题</code></a><br>如果你喜欢Ubuntu原本的样子只是讨厌jl紫背景色，修改Plymouth主题就好了<br>终端输入<code>sudo nautilus /usr/share/plymouth</code>可以用管理员权限打开Plymouth文件夹<br>你会看到里面有个themes文件夹，<strong>先备份再修改</strong><br>进入themes文件夹再进里面的ubuntu-logo文件夹，打开<code>ubuntu-logo.script</code>，<code>Ctrl+F</code>搜索<code>Window.SetBackgroundTopColor</code>然后按回车<br>你会看到有<code>Window.SetBackgroundTopColor</code>（渐变色顶端）和<code>Window.SetBackgroundBottomColor</code>（渐变色底端）<br>把它们括号里面的三个值（RGB）改成你想要的颜色就好了，我是用全0.00（也就是黑色）</p>
 <h2 id="更改登录界面背景"><a href="#更改登录界面背景" class="headerlink" title="更改登录界面背景"></a><a href="#更改登录界面背景" title="更改登录界面背景"></a>更改登录界面背景</h2><p>找到一张背景，将他移动到系统背景文件夹（建议不要放在自己用户的主文件夹，有可能会读不到），终端输入<br><code>sudo cp &#39;/你/的/图片/的/路径/和文件名&#39; /usr/share/backgrounds/</code><br>然后修改配置，<br><strong>先备份再修改，<code>sudo cp /etc/alternatives/gdm3.css /etc/alternatives/BeiFen-gdm3.css</code></strong><br>终端输入<br><code>sudo gedit /etc/alternatives/gdm3.css</code><br><code>Ctrl+F</code>搜索<code>lockDialogGroup</code>，默认代码是  </p>
-<p>1<br>2<br>3<br>4  </p>
-<p>#lockDialogGroup {<br> background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);<br> background-repeat: repeat;<br>}  </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#lockDialogGroup</span> &#123;  </span><br><span class="line"> <span class="attribute">background</span>: <span class="number">#2c001e</span> <span class="built_in">url</span>(resource:///org/gnome/shell/theme/noise-texture.png);  </span><br><span class="line"> <span class="attribute">background-repeat</span>: repeat;   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>修改为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#lockDialogGroup &#123;</span><br><span class="line">    background: #2c001e url(file:///你/的/图片/的/路径/和文件名);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-size: cover;</span><br><span class="line">    background-position: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#lockDialogGroup</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#2c001e</span> <span class="built_in">url</span>(file:///你/的/图片/的/路径/和文件名);</span><br><span class="line">    <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">    <span class="attribute">background-size</span>: cover;</span><br><span class="line">    <span class="attribute">background-position</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>保存重启就ok了</p>
 <h2 id="GNOME插件安装（先装好gnome-tweaks）"><a href="#GNOME插件安装（先装好gnome-tweaks）" class="headerlink" title="GNOME插件安装（先装好gnome-tweaks）"></a><a href="#GNOME插件安装（先装好gnome-tweaks）" title="GNOME插件安装（先装好gnome-tweaks）"></a>GNOME插件安装（先装好gnome-tweaks）</h2><h3 id="安装软件包"><a href="#安装软件包" class="headerlink" title="安装软件包"></a><a href="#安装软件包" title="安装软件包"></a>安装软件包</h3><p>终端输入<br><code>sudo apt-get install chrome-gnome-extension</code><br>（这只是包名，其实里面即支持Chrome也有Firefox）</p>
 <h3 id="浏览器安装插件"><a href="#浏览器安装插件" class="headerlink" title="浏览器安装插件"></a><a href="#浏览器安装插件" title="浏览器安装插件"></a>浏览器安装插件</h3><h5 id="Firefox"><a href="#Firefox" class="headerlink" title="Firefox"></a><a href="#Firefox" title="Firefox"></a>Firefox</h5><p><a href="https://addons.mozilla.org/" target="_blank" rel="noopener">火狐插件商店搜索</a><code>GNOME Shell integration</code></p>
@@ -625,7 +624,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -652,7 +651,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -699,7 +700,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
